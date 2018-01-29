@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <bits/stdc++.h>
+#include <QCompleter>
+#include <QDirModel>
+
 using namespace  std;
 
 struct node
@@ -30,12 +33,7 @@ private:
     Ui::spellchecker *ui;
     node *root = NULL;
     void get_text();
-    node *insert(node *Node, string word, int val, int ind);
-    node *findkey(node *Node, string word, int ind);
-    QStringList suggestions(node *root, string word);
-    node *getcommonprefix(node *Node, string word, string &commonprefix);
-    node *util(node *Node, string word, string &commonprefix, int ind);
-    void collect(node *Node, string commonprefix, deque<string> &sugg);
+    QCompleter *StringCompleter;
 };
 
 #endif // SPELLCHECKER_H

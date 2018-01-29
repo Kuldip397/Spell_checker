@@ -13,9 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        spellchecker.cpp
+        spellchecker.cpp \
+    trie.cpp
 
-HEADERS  += spellchecker.h
+HEADERS  += spellchecker.h \
+    trie.h
 
 FORMS    += spellchecker.ui
 
